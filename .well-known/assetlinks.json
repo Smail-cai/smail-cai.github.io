@@ -1,14 +1,9 @@
-[
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.dearlover.android.www",
-      "sha256_cert_fingerprints": [
-        "5F:1A:F6:B7:59:A2:65:74:E9:3B:91:BE:46:BA:86:97:42:83:F2:2A:8A:09:32:D6:17:2C:18:30:40:DB:64:23"
-      ]
-    }
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.lxj.xpopupdemo",
+    "sha256_cert_fingerprints":
+    ["5F:1A:F6:B7:59:A2:65:74:E9:3B:91:BE:46:BA:86:97:42:83:F2:2A:8A:09:32:D6:17:2C:18:30:40:DB:64:23"]
   }
-]
+}]
