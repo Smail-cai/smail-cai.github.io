@@ -52,33 +52,6 @@
             background: #0056b3;
         }
     </style>
-    <script>
-        window.onload = function () {
-            document.getElementById('adLink').addEventListener('click', function(event) {
-                event.preventDefault();
-                // 构建点击 URL
-                var skAdNetworkParams = {
-                    // 示例参数，实际参数由广告网络提供
-                    'ad-network-id': 'cDkw7geqH4.skadnetwork',
-                    'campaign-id': '1234',
-                    'app-id': 'id1153506949',
-                    'nonce': 'random-nonce-string',
-                    'source-app-id': 'id1153506949',
-                    'timestamp': Date.now().toString()
-                };
-
-                var baseUrl = 'https://apps.apple.com/cn/app/dear-lover-wholesale-clothing/id1153506949';
-                var queryString = Object.keys(skAdNetworkParams)
-                    .map(key => key + '=' + encodeURIComponent(skAdNetworkParams[key]))
-                    .join('&');
-
-                var clickUrl = baseUrl + '?' + queryString;
-
-                // 跳转到点击 URL
-                window.location.href = clickUrl;
-            });
-        }
-    </script>
 </head>
 <body>
 
