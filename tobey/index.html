@@ -104,6 +104,7 @@
 
        function getQueryParam(param) {
              var searchParams = new URLSearchParams(window.location.href);
+             console.log(searchParams); // "Hello, H5! H5, hello!"
              return searchParams.replace(param, "");
        }
     </script>
