@@ -5,10 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta property="al:android:package" content="com.zyfd.servicesocket">
-    <meta property="al:android:app_name" content="ServiceSocket">
+    <meta property="al:android:package" content="com.dearlover.android.www">
+    <meta property="al:android:app_name" content="Dear Lover">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="url" content="https://dl-stage-landing.dearlovertech.com/stageads/landing">
+    <meta name="twitter: name" content="Wholesale women's clothing vendor offer dress, tops and bottoms, swimsuits and more">
+    <meta name="twitter: description" content="">
+    <meta name="twitter: image" content="https://lh3.googleusercontent.com/ofICqqC2aExPqKdLDZJRYlul_Rc4BY7CKq43j9QdI7z3KVblHwyat5HtRvQlodi6KCM">
+    <meta name="twitter: url" content="https://dl-stage-landing.dearlovertech.com/stageads/landing">
+    <meta property="og:title" content="Wholesale women's clothing vendor offer dress, tops and bottoms, swimsuits and more">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/ofICqqC2aExPqKdLDZJRYlul_Rc4BY7CKq43j9QdI7z3KVblHwyat5HtRvQlodi6KCM">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://dl-stage-landing.dearlovertech.com/stageads/landing">
     <title>欢迎下载 DearLover - APP</title>
     <style>
         body {
@@ -52,8 +63,53 @@
             background: #0056b3;
         }
     </style>
+    <script>
+        var userAgent = navigator.userAgent;
+        var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1;
+        window.onload = function () {
+
+            if(isAndroid){
+                setTimeout(function () {
+                      window.location.href = dearlover://app?af_deeplink=true&deep_link_value=2%7C2%7C9002%7C0%7C7b2275746d5f736f75726365223a22676f6f676c65222c2275746d5f6d656469756d223a22637063222c2275746d5f63616d706169676e223a226170702d3234303632312d6f6e656c696e6b222c2275746d5f7465726d223a22222c2275746d5f636f6e74656e74223a22227d&media_source=google&pid=google&shortlink=v8w0tdpq&source_caller=ui&target_url=https%3A%2F%2Fdearlover.onelink.me%2FsuJT%2Fv8w0tdpq%3Ffbclid%3DIwZXh0bgNhZW0CMTEAAR1EI4i0q8JVlDV2EIjnN_Rx4ZsRsV7NYFO9FuTCWYUeteEw9ehUtWwfff8_aem_XeYMu1ISr3lNT4KG1mIUTA
+                }, 500)
+            }
+
+            document.getElementById('adLink').addEventListener('click', function(event) {
+                event.preventDefault();
+                // 构建点击 URL
+                var skAdNetworkParams = {
+                    // 示例参数，实际参数由广告网络提供
+                    'ad-network-id': 'cDkw7geqH4.skadnetwork',
+                    'campaign-id': '1234',
+                    'app-id': 'id1153506949',
+                    'nonce': 'random-nonce-string',
+                    'source-app-id': 'id1153506949',
+                    'timestamp': Date.now().toString()
+                };
+
+                var baseUrl = 'https://apps.apple.com/cn/app/dear-lover-wholesale-clothing/id1153506949';
+                var queryString = Object.keys(skAdNetworkParams)
+                    .map(key => key + '=' + encodeURIComponent(skAdNetworkParams[key]))
+                    .join('&');
+
+                var clickUrl = baseUrl + '?' + queryString;
+
+                // 跳转到点击 URL
+                window.location.href = clickUrl;
+            });
+        }
+
+
+    </script>
 </head>
 <body>
-
+<div class="container">
+    <h1>欢迎下载 DearLover - APP</h1>
+    <p>请点击下面的按钮下载适用于您的设备的应用。</p>
+    <div class="buttons">
+        <a href="https://dl-stage-landing.dearlovertech.com/stageads/landing" target="_blank" class="button">下载 Android 版</a>
+        <button id="adLink" class="button" target="_blank">下载 iOS 版</button>
+    </div>
+</div>
 </body>
 </html>
