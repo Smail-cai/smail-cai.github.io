@@ -103,7 +103,7 @@
        }
 
        function getQueryParam(param) {
-             var searchParams = new URLSearchParams(window.location.search);
+             var searchParams = new URLSearchParams(window.location.href);
              return searchParams.replace(param, "");
        }
     </script>
