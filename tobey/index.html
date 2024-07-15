@@ -68,12 +68,6 @@
         var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1;
         window.onload = function () {
 
-            if(isAndroid){
-                setTimeout(function () {
-                      window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value=2%7C2%7C9002%7C0%7C7b2275746d5f736f75726365223a22676f6f676c65222c2275746d5f6d656469756d223a22637063222c2275746d5f63616d706169676e223a226170702d3234303632312d6f6e656c696e6b222c2275746d5f7465726d223a22222c2275746d5f636f6e74656e74223a22227d&media_source=google&pid=google&shortlink=v8w0tdpq&source_caller=ui&target_url=https%3A%2F%2Fdearlover.onelink.me%2FsuJT%2Fv8w0tdpq%3Ffbclid%3DIwZXh0bgNhZW0CMTEAAR1EI4i0q8JVlDV2EIjnN_Rx4ZsRsV7NYFO9FuTCWYUeteEw9ehUtWwfff8_aem_XeYMu1ISr3lNT4KG1mIUTA';
-                }, 500)
-            }
-
             document.getElementById('adLink').addEventListener('click', function(event) {
                 event.preventDefault();
                 // 构建点击 URL
@@ -99,7 +93,11 @@
             });
         }
 
-
+         if(isAndroid){
+                setTimeout(function () {
+                      window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value=2%7C2%7C9002%7C0%7C7b2275746d5f736f75726365223a22676f6f676c65222c2275746d5f6d656469756d223a22637063222c2275746d5f63616d706169676e223a226170702d3234303632312d6f6e656c696e6b222c2275746d5f7465726d223a22222c2275746d5f636f6e74656e74223a22227d&media_source=google&pid=google&shortlink=v8w0tdpq&source_caller=ui&target_url=https%3A%2F%2Fdearlover.onelink.me%2FsuJT%2Fv8w0tdpq%3Ffbclid%3DIwZXh0bgNhZW0CMTEAAR1EI4i0q8JVlDV2EIjnN_Rx4ZsRsV7NYFO9FuTCWYUeteEw9ehUtWwfff8_aem_XeYMu1ISr3lNT4KG1mIUTA';
+                }, 500)
+            }
     </script>
 </head>
 <body>
