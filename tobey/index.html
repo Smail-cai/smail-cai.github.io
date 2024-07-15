@@ -68,6 +68,7 @@
         var userAgent = navigator.userAgent;
         var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1;
         window.onload = function () {
+            console.log('isAndroid4'+isAndroid);
             if(isAndroid){
                   console.log('isAndroid');
                   delayedLog(500);
