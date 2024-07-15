@@ -103,7 +103,7 @@
        }
 
        function getQueryParam(param) {
-             var searchParams = new URL(window.location.href);
+             var searchParams = new URL('https://dl-stage-landing.dearlovertech.com/stageads/landing?2|2|11443|0|7b2275746d5f736f75726365223a22736f75726365222c2275746d5f6d656469756d223a226d656469756d222c2275746d5f63616d706169676e223a2263616d706169676e222c2275746d5f7465726d223a227465726d222c2275746d5f636f6e74656e74223a22636f6e74656e74227d');
              console.log(searchParams);
              return searchParams.href.replace(param, "");
        }
