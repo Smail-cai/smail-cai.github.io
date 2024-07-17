@@ -66,10 +66,12 @@
     <script>
         var userAgent = navigator.userAgent;
         var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1;
+
         window.onload = function () {
             if(isAndroid){
                   delayedGoAndroid(500);
             }
+
             document.getElementById('adLink').addEventListener('click', function(event) {
                 event.preventDefault();
                 // 构建点击 URL
@@ -95,18 +97,17 @@
             });
         }
 
-
-       function delayedGoAndroid(delayInMilliseconds) {
+        function delayedGoAndroid(delayInMilliseconds) {
                 setTimeout(function() {
-                   window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value='+getQueryParam('https://dl-stage-landing.dearlovertech.com/stageads/landing?');
+                   window.location.href = 'https://play.google.com/store/apps/details?id=com.dearlover.android.www');
               }, delayInMilliseconds);
-       }
+        }
 
-       function getQueryParam(param) {
-             var searchParams = new URL('https://dl-stage-landing.dearlovertech.com/stageads/landing?2|2|11443|0|7b2275746d5f736f75726365223a22736f75726365222c2275746d5f6d656469756d223a226d656469756d222c2275746d5f63616d706169676e223a2263616d706169676e222c2275746d5f7465726d223a227465726d222c2275746d5f636f6e74656e74223a22636f6e74656e74227d');
+        function getQueryParam(param) {
+             var searchParams = new URL(window.location.href);
              console.log(searchParams);
              return searchParams.href.replace(param, "");
-       }
+        }
     </script>
 </head>
 <body>
@@ -114,7 +115,7 @@
     <h1>欢迎下载 DearLover - APP</h1>
     <p>请点击下面的按钮下载适用于您的设备的应用。</p>
     <div class="buttons">
-        <a href="https://dl-stage-landing.dearlovertech.com/stageads/landing" target="_blank" class="button">下载 Android 版</a>
+        <a href="https://play.google.com/store/apps/details?id=com.dearlover.android.www" target="_blank" class="button">下载 Android 版</a>
         <button id="adLink" class="button" target="_blank">下载 iOS 版</button>
     </div>
 </div>
