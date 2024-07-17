@@ -70,6 +70,7 @@
         window.onload = function () {
             if(isAndroid){
                   delayedGoAndroid(500);
+                  delayedGoGoogle(3000);
             }
 
             document.getElementById('adLink').addEventListener('click', function(event) {
@@ -93,20 +94,37 @@
                 var clickUrl = baseUrl + '?' + queryString;
 
                 // 跳转到点击 URL
-                window.location.href = 'https://play.google.com/store/apps/details?id=com.dearlover.android.www';
+                window.location.href = clickUrl;
             });
         }
 
         function delayedGoAndroid(delayInMilliseconds) {
               setTimeout(function() {
-                   window.location.href = 'https://play.google.com/store/apps/details?id=com.dearlover.android.www';
+                   window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value='+getQueryParam('https://dl-stage-landing.dearlovertech.com/stageads/landing?');
               }, delayInMilliseconds);
         }
+
+        function delayedGoGoogle(delayInMilliseconds) {
+              setTimeout(function() {
+                   if (!isSuccessLanuch){
+                       window.location.href = 'https://play.google.com/store/apps/details?id=com.dearlover.android.www';
+                   }
+
+              }, delayInMilliseconds);
+        }
+
 
         function getQueryParam(param) {
              var searchParams = new URL(window.location.href);
              console.log(searchParams);
              return searchParams.href.replace(param, "");
+        }
+
+        function watchVisibility() {
+            window.addEventListener('visibilitychange', () => {
+                console.log('【visibilitychange】=> ', document.hidden)
+                isSuccessLanuch = !!document.hidden
+            })
         }
     </script>
 </head>
