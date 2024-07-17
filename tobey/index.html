@@ -73,7 +73,7 @@
             watchVisibility();
             if(isAndroid){
                   delayedGoAndroid(500);
-                  delayedGoGoogle(3000);
+                  delayedGoGoogle(3500);
             }
 
             document.getElementById('adLink').addEventListener('click', function(event) {
@@ -110,7 +110,7 @@
         function delayedGoGoogle(delayInMilliseconds) {
               setTimeout(function() {
                    if (!isSuccessLanuch){
-                       window.location.href = 'intent://play.google.com/store/apps/details?id=com.dearlover.android.www&pcampaignid=web_redirect#Intent;scheme=https;action=android.intent.action.VIEW;package=com.android.vending;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.dearlover.android.www&redirect=0;end';
+                       //window.location.href = 'https://play.google.com/store/apps/details?id=com.dearlover.android.www';
                    }
 
               }, delayInMilliseconds);
