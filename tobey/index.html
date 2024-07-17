@@ -66,6 +66,7 @@
     <script>
         var userAgent = navigator.userAgent;
         var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1;
+        var isSuccessLanuch = false;
 
         window.onload = function () {
             if(isAndroid){
@@ -100,7 +101,7 @@
 
         function delayedGoAndroid(delayInMilliseconds) {
               setTimeout(function() {
-                   window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value='+getQueryParam('https://dl-stage-landing.dearlovertech.com/stageads/landing?');
+                   window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value=';
               }, delayInMilliseconds);
         }
 
