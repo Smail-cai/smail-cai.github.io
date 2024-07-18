@@ -1,144 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta property="al:android:package" content="com.dearlover.android.www">
-    <meta property="al:android:app_name" content="Dear Lover">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="url" content="https://dl-stage-landing.dearlovertech.com/stageads/landing">
-    <meta name="twitter: name" content="Wholesale women's clothing vendor offer dress, tops and bottoms, swimsuits and more">
-    <meta name="twitter: description" content="">
-    <meta name="twitter: image" content="https://lh3.googleusercontent.com/ofICqqC2aExPqKdLDZJRYlul_Rc4BY7CKq43j9QdI7z3KVblHwyat5HtRvQlodi6KCM">
-    <meta name="twitter: url" content="https://dl-stage-landing.dearlovertech.com/stageads/landing">
-    <meta property="og:title" content="Wholesale women's clothing vendor offer dress, tops and bottoms, swimsuits and more">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/ofICqqC2aExPqKdLDZJRYlul_Rc4BY7CKq43j9QdI7z3KVblHwyat5HtRvQlodi6KCM">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="https://dl-stage-landing.dearlovertech.com/stageads/landing">
-    <title>欢迎下载 DearLover - APP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            color: #fff;
-            background: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .button:hover {
-            background: #0056b3;
-        }
-    </style>
+    <title>跳转页面</title>
     <script>
-        var userAgent = navigator.userAgent;
-        var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1;
-        var isSuccessLanuch = false;
-
-        window.onload = function () {
-
-            watchVisibility();
-            if(isAndroid){
-                  delayedGoAndroid(500);
-                  delayedGoGoogle(3500);
-            }
-
-            document.getElementById('adLink').addEventListener('click', function(event) {
-                event.preventDefault();
-                // 构建点击 URL
-                var skAdNetworkParams = {
-                    // 示例参数，实际参数由广告网络提供
-                    'ad-network-id': 'cDkw7geqH4.skadnetwork',
-                    'campaign-id': '1234',
-                    'app-id': 'id1153506949',
-                    'nonce': 'random-nonce-string',
-                    'source-app-id': 'id1153506949',
-                    'timestamp': Date.now().toString()
-                };
-
-                var baseUrl = 'https://apps.apple.com/cn/app/dear-lover-wholesale-clothing/id1153506949';
-                var queryString = Object.keys(skAdNetworkParams)
-                    .map(key => key + '=' + encodeURIComponent(skAdNetworkParams[key]))
-                    .join('&');
-
-                var clickUrl = baseUrl + '?' + queryString;
-
-                // 跳转到点击 URL
-                window.location.href = clickUrl;
-            });
+        function openApp() {
+            var deepLink = "https://dl-stage-landing.dearlovertech.com/stageads/landing?2|2|11443|0|7b2275746d5f736f75726365223a22736f75726365222c2275746d5f6d656469756d223a226d656469756d222c2275746d5f63616d706169676e223a2263616d706169676e222c2275746d5f7465726d223a227465726d222c2275746d5f636f6e74656e74223a22636f6e74656e74227d"; // 替换为你的深度链接
+            location.assign(deepLink);
         }
 
-        function delayedGoAndroid(delayInMilliseconds) {
-              setTimeout(function() {
-                   window.location.href = 'dearlover://app?af_deeplink=true&deep_link_value=';
-              }, delayInMilliseconds);
-        }
+        window.onload = function() {
+            //setTimeout(function() {
+            //    var linkButton = document.getElementById('link');
+            //    //linkButton.addEventListener('click', function(event) {
+            //    //    event.preventDefault(); // 防止默认行为
+            //    //    openApp();
+            //    //});
 
-        function delayedGoGoogle(delayInMilliseconds) {
-              setTimeout(function() {
-                   if (!isSuccessLanuch){
-                       //window.location.href = 'https://play.google.com/store/apps/details?id=com.dearlover.android.www';
-                   }
-
-              }, delayInMilliseconds);
-        }
-
-
-        function getQueryParam(param) {
-             var searchParams = new URL(window.location.href);
-             console.log(searchParams);
-             return searchParams.href.replace(param, "");
-        }
-
-        function watchVisibility() {
-            window.addEventListener('visibilitychange', () => {
-                console.log('【visibilitychange】=> ', document.hidden)
-                isSuccessLanuch = !!document.hidden
-            })
+            //    linkButton.click(); // 模拟点击按钮
+            //}, 1500);
         }
     </script>
 </head>
 <body>
-<div class="container">
-    <h1>欢迎下载 DearLover - APP</h1>
-    <p>请点击下面的按钮下载适用于您的设备的应用。</p>
-    <div class="buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.dearlover.android.www" target="_blank" class="button">下载 Android 版</a>
-        <button id="adLink" class="button" target="_blank">下载 iOS 版</button>
-    </div>
-</div>
+<h1>欢迎访问跳转页面</h1>
+<p>点击下面的链接进行跳转：</p>
+<a id="link" href="#" onclick="openApp(); return false;">点击打开IOS/android应用程序</a>
 </body>
 </html>
