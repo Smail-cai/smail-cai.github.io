@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跳转页面</title>
-    <script>
-        function openApp() {
-        var deepLink = "https://www.dear-lover.com/womens-blouses-shirts/?utm_term=CMPN422&link=2|1|164606|0|7b2275746d5f736f75726365223a22222c2275746d5f6d656469756d223a22222c2275746d5f63616d706169676e223a22222c2275746d5f7465726d223a22222c2275746d5f636f6e74656e74223a22227d";
-            location.assign(deepLink);
-        }
-
-        window.onload = function() {
-            //setTimeout(function() {
-            //    var linkButton = document.getElementById('link');
-            //    //linkButton.addEventListener('click', function(event) {
-            //    //    event.preventDefault(); // 防止默认行为
-            //    //    openApp();
-            //    //});
-
-            //    linkButton.click(); // 模拟点击按钮
-            //}, 1500);
-        }
-    </script>
+    <title>UAParser.js Example</title>
 </head>
 <body>
-<h1>欢迎访问跳转页面</h1>
-<p>点击下面的链接进行跳转：</p>
-<a id="link" href="#" onclick="openApp(); return false;">点击打开IOS/android应用程序</a>
+<h1>Device Information</h1>
+<p id="device-info"></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.2/ua-parser.min.js"></script>
+<script>
+    // 创建UAParser实例
+    var parser = new UAParser();
+
+    // 获取解析结果
+    var result = parser.getResult();
+
+    // 获取设备型号
+    var deviceModel = result.device.model || "Unknown device model";
+    var deviceVendor = result.device.vendor || "Unknown vendor";
+    var deviceType = result.device.type || "Unknown device type";
+
+    // 获取操作系统信息
+    var osName = result.os.name || "Unknown OS";
+    var osVersion = result.os.version || "Unknown OS version";
+
+    // 获取浏览器信息
+    var browserName = result.browser.name || "Unknown browser";
+    var browserVersion = result.browser.version || "Unknown browser version";
+
+    // 显示结果
+    document.getElementById('device-info').innerText =
+        "Device Model: " + deviceModel + "\n" +
+        "Device Vendor: " + deviceVendor + "\n" +
+        "Device Type: " + deviceType + "\n" +
+        "OS: " + osName + " " + osVersion + "\n" +
+        "Browser: " + browserName + " " + browserVersion;
+</script>
 </body>
 </html>
