@@ -30,7 +30,7 @@
     // 获取浏览器信息
     var browserName = result.browser.name || "Unknown browser";
     var browserVersion = result.browser.version || "Unknown browser version";
-    var deviceModel = platform.name + ' ' + platform.version;
+    var deviceModel2 = platform.name + ' ' + platform.version;
 
     // 显示结果
     document.getElementById('device-info').innerText =
@@ -38,7 +38,7 @@
         "Device Vendor: " + deviceVendor + "\n" +
         "Device Type: " + deviceType + "\n" +
         "OS: " + osName + " " + osVersion + "\n" +
-        "Browser: " + browserName + " " + browserVersion+" "+deviceModel;
+        "Browser: " + browserName + " " + browserVersion+" "+deviceModel2;
 </script>
 </body>
 </html>
