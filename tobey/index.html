@@ -18,8 +18,13 @@
         deviceModel = match[0];
     }
 
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+
     // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = '设备型号：' + deviceModel+" "+userAgent;
+    document.getElementById('deviceModel').innerText = '设备型号：' + deviceModel+" "+userAgent+" "+screenWidth+" "+screenHeight;
+
+
 </script>
 </body>
 </html>
