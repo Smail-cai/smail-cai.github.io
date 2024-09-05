@@ -27,7 +27,7 @@ var dpr = window.devicePixelRatio || 1;
 var physicalScreenWidth = screenWidth * dpr;
 var physicalScreenHeight = screenHeight * dpr
     // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = '设备型号：' + deviceModel+" "+userAgent+" "+screenWidth+" "+screenHeight+" = "+physicalScreenWidth+" = "+physicalScreenHeight;
+    document.getElementById('deviceModel').innerText = screenWidth+"= "+screenHeight+" = "+physicalScreenWidth+" = "+physicalScreenHeight;
 
 
 </script>
