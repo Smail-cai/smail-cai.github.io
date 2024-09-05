@@ -20,9 +20,14 @@
 
     var screenWidth = window.innerWidth;
     var screenHeight = window.innerHeight;
+// 获取设备像素比
+var dpr = window.devicePixelRatio || 1;
 
+// 将CSS像素转换为物理像素
+var physicalScreenWidth = screenWidth * dpr;
+var physicalScreenHeight = screenHeight * dpr
     // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = '设备型号：' + deviceModel+" "+userAgent+" "+screenWidth+" "+screenHeight;
+    document.getElementById('deviceModel').innerText = '设备型号：' + deviceModel+" "+userAgent+" "+screenWidth+" "+screenHeight+" = "+physicalScreenWidth+" = "+physicalScreenHeight;
 
 
 </script>
