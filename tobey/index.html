@@ -33,8 +33,13 @@ var screenHeight2 = window.screen.height;
  // 获取用户代理字符串
         var userAgent = navigator.userAgent;
           var platform = navigator.platform;
+          const parser = new UAParser();
+const result = parser.getResult();
+
     // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent;
+    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent+" = "+result.os.version;
+
+const UAParser = require('ua-parser-js');
 
 
 </script>
