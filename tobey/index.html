@@ -8,20 +8,21 @@
 <p id="deviceModel"></p>
 
 <script>
-    // 获取用户代理字符串
-    var userAgent = navigator.userAgent;
+    import UAParser from 'ua-parser-js';
+ // 获取用户代理字符串
+ var userAgent = navigator.userAgent;
 
-    // 正则表达式匹配设备型号信息
-    var deviceModel = "Unknown";
-    var match = userAgent.match(/(iPhone|iPad|iPod|Android|Windows Phone)[\s\/](\d+(\.\d+)?)/);
-    if (match) {
-        deviceModel = match[0];
-    }
-        var clientWidth = document.documentElement.clientWidth;
-        var clientHeight = document.documentElement.clientHeight;
+ // 正则表达式匹配设备型号信息
+ var deviceModel = "Unknown";
+ var match = userAgent.match(/(iPhone|iPad|iPod|Android|Windows Phone)[\s\/](\d+(\.\d+)?)/);
+ if (match) {
+     deviceModel = match[0];
+ }
+     var clientWidth = document.documentElement.clientWidth;
+     var clientHeight = document.documentElement.clientHeight;
 
-    var screenWidth = window.innerWidth;
-    var screenHeight = window.innerHeight;
+ var screenWidth = window.innerWidth;
+ var screenHeight = window.innerHeight;
 // 获取设备像素比
 var dpr = window.devicePixelRatio || 1;
 
@@ -30,14 +31,14 @@ var physicalScreenWidth = screenWidth * dpr;
 var physicalScreenHeight = screenHeight * dpr
 var screenWidth2 = window.screen.width;
 var screenHeight2 = window.screen.height;
- // 获取用户代理字符串
-        var userAgent = navigator.userAgent;
-          var platform = navigator.platform;
-          const parser = new UAParser();
+// 获取用户代理字符串
+     var userAgent = navigator.userAgent;
+       var platform = navigator.platform;
+       const parser = new UAParser();
 const result = parser.getResult();
 
-    // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent+" = "+result.os.version;
+ // 将设备型号信息显示在页面上
+ document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent+" = "+result.os.version;
 
 const UAParser = require('ua-parser-js');
 
