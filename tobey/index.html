@@ -7,7 +7,7 @@
 <h1>设备型号信息</h1>
 <p id="deviceModel"></p>
 
-<script src="https://cdn.jsdelivr.net/npm/ua-parser-js@latest/dist/ua-parser.min.js">
+<script >
 
  // 获取用户代理字符串
  var userAgent = navigator.userAgent;
@@ -34,11 +34,10 @@ var screenHeight2 = window.screen.height;
 // 获取用户代理字符串
      var userAgent = navigator.userAgent;
   var platform = navigator.platform;
-const parser = new UAParser();
-const result = parser.getResult();
+
 
  // 将设备型号信息显示在页面上
- document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent+" = "+result.os.version;
+ document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent;
 
 const UAParser = require('ua-parser-js');
 
