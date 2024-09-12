@@ -17,6 +17,8 @@
     if (match) {
         deviceModel = match[0];
     }
+        var clientWidth = document.documentElement.clientWidth;
+        var clientHeight = document.documentElement.clientHeight;
 
     var screenWidth = window.innerWidth;
     var screenHeight = window.innerHeight;
@@ -29,7 +31,7 @@ var physicalScreenHeight = screenHeight * dpr
 var screenWidth2 = window.screen.width;
 var screenHeight2 = window.screen.height;
     // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+physicalScreenWidth+" = "+physicalScreenHeight;
+    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight;
 
 
 </script>
