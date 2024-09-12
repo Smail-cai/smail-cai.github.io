@@ -30,8 +30,10 @@ var physicalScreenWidth = screenWidth * dpr;
 var physicalScreenHeight = screenHeight * dpr
 var screenWidth2 = window.screen.width;
 var screenHeight2 = window.screen.height;
+ // 获取用户代理字符串
+        var userAgent = navigator.userAgent;
     // 将设备型号信息显示在页面上
-    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight;
+    document.getElementById('deviceModel').innerText = screenWidth2+" a=a "+screenHeight2+" = "+clientWidth+" = "+clientHeight+" = "+userAgent;
 
 
 </script>
